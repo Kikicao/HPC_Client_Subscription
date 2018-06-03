@@ -175,7 +175,7 @@ Historical data of usages and allocations categorized by cycle and groups.
  - The eight variables are candicates used to predict usage portion and data is collected through previous usage and allocation.
 
 ### Summary
- - All eight Group Features (**'Usage','Allocation','Usage_Portion_n',,'users','jobs','SU per job','SU per user','Jobs per user'**) show relatively **weak linear association**. Combining this analysis resulyt, we can interpret the logistic regression analysis in later period more comprehensively.
+ - All eight **Group Features** ('Usage','Allocation','Usage_Portion_n',,'users','jobs','SU per job','SU per user','Jobs per user') show relatively **weak linear association** with each other. Combining this analysis resulyt, we can interpret the logistic regression analysis in later period more comprehensively.
  - **Conclusion**: The eight variables we selected are **good indicator** to assess the potential Useage Portion, and make judgement on their **future proposal** for resources.
 <br />
 <br />
