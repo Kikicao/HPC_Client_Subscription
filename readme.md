@@ -17,7 +17,7 @@
 
 # 2 Description of Data
 
-Allocation and usage data were queried from MCC internal Account-Tool database (MySQL) hosted at ***db.###.uchicago.edu***, including multiple tables storing MCC accounts information. 
+Allocation and usage data were queried from ***MCC internal Account-Tool database*** (MySQL) hosted at db.###.uchicago.edu, including multiple tables storing MCC accounts information. 
 
 - **unit**: stores the unit name (such as PSD, BSE, IME, Booth ...) and its internal ID.
 - **midway_account**: provides the account names, created dates and corresponding unit IDs.
@@ -25,7 +25,7 @@ Allocation and usage data were queried from MCC internal Account-Tool database (
 - **midway_usages**: stores all job records in current year-cycle. A record includes all job information dumped from the SLURM ***sacct*** command. Several important columns are (1) date-time (2) account (3) user (4) partition (5) ncpus (6) nnodes (7) charged SUs. Only jobs running on the "sandyb" and "broadwl" paritions are used for this report.
 - **midway_usages_archived**: the same structure as the **midway_usages** table but stores all records in past year-cycles.
 
-Allocation records are directly dumped from the database covering cycles 2013 to 2018. Usages are pre-processed for each cycle by following steps:
+Allocation records are directly dumped from the database covering ***cycles 2013 to 2018***. Usages are pre-processed for each cycle by following steps:
 
 1. Check out all records from either **midway_usages** or **midway_usages_archived** table.
 2. Aggregate records by group accounts and count the total number of jobs, charged SUs, distinct users, and calculate average cpus and nodes for jobs in each group.
@@ -154,7 +154,7 @@ The graph shows from 2013 - 2018, 10 vip groups as a whole have more consumption
   - Averagely, larger groups have larger allocation and usage portions, which confirms our conjecture.
   - Half of the large groups reach the hypothetical usage portion, but most smaller groups did not do so.
 <br /> 
-<img src='image/3_1_portion_allocation_group.png' style="width:600px" />
+<center><img src='image/3_1_portion_allocation_group.png' style="width:600px" /></center>
 ### Data
 Historical data of usages and allocations categorized by cycle and groups.
 
