@@ -118,6 +118,7 @@ This section conducts **allocation** and **consumption** analysis based on the t
 <br />
 <br />
 ## 3.3 VIP Groups
+<br />
 <table>
   <tr>
     <td><img src="image/2_3_vip_accounts.png",style="width:100%" /></td>
