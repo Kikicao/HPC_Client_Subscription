@@ -163,7 +163,7 @@ Historical data of usages and allocations categorized by cycle and groups.
 ### Summary
  - We should conduct fair redistribution based on data instead of hypotheses.
  - Larger groups indeed have averagely large usage portion and they are supposed to receive more allocation up on subscription.
-<br /><br /><br />
+<br /><br />
 
 ## 3.5 Matrix Analysis
 
@@ -172,11 +172,11 @@ Historical data of usages and allocations categorized by cycle and groups.
 <img src="image/3_1_Matrix_Analysis.png" />
 
 ### Data
- - Here we regard groups with more than 4 million units of allocation as "VIP". "Jobs" are measured in every 3 million.
+ - The eight variables are candicates used to predict usage portion and data is collected through previous usage and allocation.
 
 ### Summary
- - All three Group Features (**Allocation, total Job and Group size**) are **strongly positively associated** with Use Portion
- - **Conclusion**: The three variables we selected are **good indicator** to assess the potential Useage Portion, and make judgement on their **future proposal** for resources.
+ - All eight Group Features (**'Usage','Allocation','Usage_Portion_n',,'users','jobs','SU per job','SU per user','Jobs per user'**) show relatively **weak linear association**. Combining this analysis resulyt, we can interpret the logistic regression analysis in later period more comprehensively.
+ - **Conclusion**: The eight variables we selected are **good indicator** to assess the potential Useage Portion, and make judgement on their **future proposal** for resources.
 <br />
 <br />
 
