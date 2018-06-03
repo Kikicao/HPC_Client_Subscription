@@ -1,13 +1,12 @@
 <p><center><h1>Data Analysis for RCC Usages</h1></center></p>
 
-<p><center><strong>Yiyue Cao & Yuxing Peng</strong></center></p>Singular matrix
-
+<p><center><strong>Yiyue Cao & Yuxing Peng</strong></center></p>
 
 
 
 # Background and Object 
 
- ⭕️ ***The Research Computing Center (RCC)*** provides the University of Chicago community a full-service ***high-performance computing (HPC)*** center, including visualization, software, workshops, consulting, and data-management strategies. 
+ ⭕️ ***The M Computing Center *** provides the University of Chicago community a full-service ***high-performance computing (HPC)*** center, including visualization, software, workshops, consulting, and data-management strategies. 
 
  ⭕️ But in recent years, with the increased importance of computing resources and skyrocketed demand of them, there appears to be **underusage** and **misallocation**. 
  
@@ -117,7 +116,7 @@ This section conducts **allocation** and **consumption** analysis based on the t
  - ***Rejection sensitivity***:
      Having experienced rejection to demanded allocation, divisions tended to be conserved in consumption. For scientific researches, this is not always a good trend. In the long term, without sufficient computing-resource enpowerment, researchers will get frustrated and researches will be effected.
 
- <br />
+<br />
  <br />
  <br />
 
@@ -139,7 +138,7 @@ The graph shows from 2013 - 2018, 10 vip groups as a whole have more consumption
 ### Summary
  - In every year, VIP groups as a whole are **underserved**: Even though they might have proposed for more resources, they didn't get enough.
  - This reflect a serious problem of **misallocation** especially for groups with large demand for resources. <br /><br /> <br />
- <br />
+<br />
  
 
 ## 3.4 Relation between Usage and Allocation
@@ -155,6 +154,9 @@ The graph shows from 2013 - 2018, 10 vip groups as a whole have more consumption
  ⭕️In this graph, every point represents **one account**,the **Size**🌕represents group size, the **Color** indicates allocation volumn and the **Height** reflects its usage portion. <br />   The <span style="color:red">red dotted line</span> is the hypothetical usage portion based on past days of 2018. <br />
   - Averagely, larger groups have larger allocation and usage portions, which confirms our conjecture.
   - Half of the large groups reach the hypothetical usage portion, but most smaller groups did not do so.
+  
+  
+<img src='image/3_1_portion_allocation_group.png',style="width:600px" />
 
 ### Data
 Historical data of usages and allocations categorized by cycle and groups.
@@ -168,7 +170,7 @@ Historical data of usages and allocations categorized by cycle and groups.
 
 ⭕️The pair-wise scatter plots are shown below for **Group Features** and **Useage Portion prediction**. 
  
-<img src="image/2_4_Matrix_Analysis.png",style="width:800px" />
+<img src='image/3_1_Matrix_Analysis.png',style="width:600px" />
 
 ### Data
  - Here we regard groups with more than 4 million units of allocation as "VIP". "Jobs" are measured in every 3 million.
@@ -176,34 +178,52 @@ Historical data of usages and allocations categorized by cycle and groups.
 ### Summary
  - All three Group Features (**Allocation, total Job and Group size**) are **strongly positively associated** with Use Portion
  - **Conclusion**: The three variables we selected are **good indicator** to assess the potential Useage Portion, and make judgement on their **future proposal** for resources.
-
-
-
-## 3.5 Logistic Regression Analysis
+<br />
+<br />
+## 3.6 Logistic Regression Analysis for Future Trend
 
 We use **Groups' Features** to conduct **Useage Portion prediction**. The 8 features used here is 'Usage','Allocation','Usage_Portion_n',,'users','jobs','SU per job','SU per user','Jobs per user'. We ran a logistic regression on **next year's usage portion**.
 
 
-|   |coef    |Std Err    |     z     |   Pr   |   [0.025   |      0.975] |
-|----------------|-----------|-----------|-----------|-----------|------------|-------------|
-| **Usage**          |     0.0023|      0.007|      0.332|      0.740|      -0.011|       0.016 |
-| **Allocation**     |    -0.0013|      0.009|     -0.151|      0.880|      -0.019|       0.016 |
-| **Usage_Portion_n**|     1.5207|      0.027|     55.796|      0.000|       1.467|       1.574 |
-| **users**          |    -0.0007|      0.002|     -0.302|      0.763|      -0.005|       0.004 |
-| **jobs**           | -1.411e-09|   1.52e-07|     -0.009|      0.993|   -2.99e-07|    2.96e-07 |
-| **SU_/job_**        |     0.0542|      0.150|      0.362|      0.717|      -0.239|       0.348 |
-|**SU_/user_**       | -6.146e-08|   3.08e-07|     -0.200|      0.842|   -6.65e-07|     5.42e-07|
-| **Job_/user_**      | -3.645e-07|    1.9e-06|     -0.192|      0.848|   -4.09e-06|     3.36e-06|
+<img src="image/3_1_Logistic_Regression.png",style="width:600px" />
 
 ### Summary
- - All three Group Features (**Allocation, total Job and Group size**) are **strongly positively associated** with Use Portion
- - **Conclusion**: The three variables we selected are **good indicator** to assess the potential Useage Portion, and make judgement on their **future proposal** for resources.
+ - Six out of Eight group features reach **significant level**, indicating a strong correlation between them and the next year's usage portion, and they can be used as predicting factors.
+  - In result testing, the **accuracy** of our model reaches **80.1%**. However, there is still room for improvement since in rawdata, the portion of "Under Usage" is more than 50%, the correctness for null hypothesis is not pretty high.
+ - **Conclusion**: The six variables we selected are **good indicator** to assess the potential Useage Portion, among which **Users and Usage** shows significant precise in predicting future trend.
+<br />
+<br />
+## 3.7 Logistic Regression Analysis for Usage Portion
 
-
+### Relationship between Usage and Usage Portion
+<table>
+  <tr>
+    <td><img src="image/3_1_logistic_usage_for_portion.png",style="width:70%" /></td>
+    <td><img src="image/3_1_logistic_usage_for_portion_2.png",style="width:70%"/></td>
+  </tr>
+</table>
+### Summary
+ - There is strong correlation between the uages and usage portion, from which we can conclude that larger group can utilize subscribed computing resources more efficiently. This confirms our proposal that larger groups (Vips) listed above are supposed to have large allocation of resources. 
+<br />
+### Relationship between Group Size and Usage Portion
+<table>
+  <tr>
+    <td><img src="image/3_1_logistic_user_for_portion.png",style="width:70%" /></td>
+    <td><img src="image/3_1_logistic_user_for_portion_2.png",style="width:70%"/></td>
+  </tr>
+</table>
+### Summary
+ - There is strong correlation between the group size and usage portion, from which we can conclude that larger group can utilize subscribed computing resources more efficiently. This confirms our proposal that larger groups (Vips) listed above are supposed to have large allocation of resources. 
+<br />
 
 # 4 Conclusions
+In this project, we analyze the utilization of allocated computing resources and usage condition records from **M Computing Center** HPC. We assess the usage portion for different research groups given the **group futures** including 'Usage','Allocation','Usage_Portion_n',,'users','jobs','SU per job','SU per user','Jobs per user'. Then we combine the group features and usage portion indicators with the correspondingly **next year's usage portion**. The results were presented and explained.
+
+From the data above, we  proved that the research groups with smaller size account for a large portion of groups stricken with **Under Usage** which spoilt the **utilization of resources** in M Computing Center. Moreover, given the restriction in resources allocation for large groups, we need consider another way to assess the allocation subscriptions for different groups. The methods we would recommend is to take **group futures** into consideration instead of simply sticking "equality and fairness". After all, based on economic principles, **equality is not efficiency**. To achieve social efficiency, we need to achieve the maximum summation of **Producer Surplus(PS)** and **Comsumer Surplus(CS)**, and minimize **Deadweight Loss(DWL)** that is generated by **quota and under usage**. 
+
+<img src="image/4_1_Deadweight_loss.png",style="width:300px" />
+
+Overall, the indicators we chose are proved to play a significant role in the usage portion and can be considered as reasonable predictor for future usage portion. In future, M Computing Center should assess subscription of computing resources based on those indicators.
 
 
-
-
-# 5 Table of Contents
+ - _For security reason, the name of the computing center is replaced by M computing center._
