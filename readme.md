@@ -235,6 +235,7 @@ Overall, the indicators we chose are proved to play a significant role in the us
 <center><img src="image/4_1_Demo.png" style="width:400" /></center>
 
  - _Please nott: For security reason, the name of the computing center is replaced by Midway computing center and "###"._
+ _The project is ongoing with updates of data and further analysis on **Clients Classification** with KMeans method and so on._
  
 <br /> 
 
