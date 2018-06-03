@@ -148,14 +148,13 @@ The graph shows from 2013 - 2018, 10 vip groups as a whole have more consumption
  ⭕️This graph shows the accumulated usage portions of all accounts.
   - The point reveals that **10% accounts** use **80% total available resources**, which is highly leveraged allocation. 
   - In 2017 and 2018, the issue seemed to be relieved. However, the graph below tells a different story:
- 
-<img src="image/2_4_Usage_Rate.png",style="width:600px" /> 
+<br />
+<img src="image/2_4_usage_rate.png",style="width:600px" /> 
 
  ⭕️In this graph, every point represents **one account**,the **Size**🌕represents group size, the **Color** indicates allocation volumn and the **Height** reflects its usage portion. <br />   The <span style="color:red">red dotted line</span> is the hypothetical usage portion based on past days of 2018. <br />
   - Averagely, larger groups have larger allocation and usage portions, which confirms our conjecture.
   - Half of the large groups reach the hypothetical usage portion, but most smaller groups did not do so.
-  
-  
+<br /> 
 <img src='image/3_1_portion_allocation_group.png',style="width:600px" />
 
 ### Data
@@ -169,7 +168,7 @@ Historical data of usages and allocations categorized by cycle and groups.
 ## 3.5 Matrix Analysis
 
 ⭕️The pair-wise scatter plots are shown below for **Group Features** and **Useage Portion prediction**. 
- 
+
 <img src='image/3_1_Matrix_Analysis.png',style="width:600px" />
 
 ### Data
