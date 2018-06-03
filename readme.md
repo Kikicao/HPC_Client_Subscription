@@ -155,6 +155,7 @@ The graph shows from 2013 - 2018, 10 vip groups as a whole have more consumption
   - Half of the large groups reach the hypothetical usage portion, but most smaller groups did not do so.
 <br /> 
 <img src='image/3_1_portion_allocation_group.png' style="width:600px" />
+
 ### Data
 Historical data of usages and allocations categorized by cycle and groups.
 
@@ -177,6 +178,7 @@ Historical data of usages and allocations categorized by cycle and groups.
  - **Conclusion**: The three variables we selected are **good indicator** to assess the potential Useage Portion, and make judgement on their **future proposal** for resources.
 <br />
 <br />
+
 ## 3.6 Logistic Regression Analysis for Future Trend
 
 We use **Groups' Features** to conduct **Useage Portion prediction**. The 8 features used here is 'Usage','Allocation','Usage_Portion_n',,'users','jobs','SU per job','SU per user','Jobs per user'. We ran a logistic regression on **next year's usage portion**.
@@ -189,6 +191,7 @@ We use **Groups' Features** to conduct **Useage Portion prediction**. The 8 feat
  - **Conclusion**: The six variables we selected are **good indicator** to assess the potential Useage Portion, among which **Users and Usage** shows significant precise in predicting future trend.
 <br />
 <br />
+
 ## 3.7 Logistic Regression Analysis for Usage Portion
 
 ### Relationship between Usage and Usage Portion
@@ -198,9 +201,11 @@ We use **Groups' Features** to conduct **Useage Portion prediction**. The 8 feat
     <td><img src="image/3_1_logistic_usage_for_portion_2.png" style="width:70%"/></td>
   </tr>
 </table>
+
 ### Summary
  - There is strong correlation between the uages and usage portion, from which we can conclude that larger group can utilize subscribed computing resources more efficiently. This confirms our proposal that larger groups (Vips) listed above are supposed to have large allocation of resources. 
 <br />
+
 ### Relationship between Group Size and Usage Portion
 <table>
   <tr>
@@ -208,6 +213,7 @@ We use **Groups' Features** to conduct **Useage Portion prediction**. The 8 feat
     <td><img src="image/3_1_logistic_user_for_portion_2.png.png" style="width:70%"/></td>
   </tr>
 </table>
+
 ### Summary
  - There is strong correlation between the group size and usage portion, from which we can conclude that larger group can utilize subscribed computing resources more efficiently. This confirms our proposal that larger groups (Vips) listed above are supposed to have large allocation of resources. 
 <br />
