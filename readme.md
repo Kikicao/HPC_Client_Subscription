@@ -142,8 +142,7 @@ The graph shows from 2013 - 2018, 10 vip groups as a whole have more consumption
 
 ## 3.4 Relation between Usage and Allocation
 
-<br /> 
-<center><img src="image/2_4_accumulated_usage_show.png" style="width:400px" /></center>
+<center><img src="image/2_4_accumulated_usage_show.png" style="width:600px" /></center>
  ⭕️This graph shows the accumulated usage portions of all accounts.
   - The point reveals that **10% accounts** use **80% total available resources**, which is highly leveraged allocation. 
   - In 2017 and 2018, the issue seemed to be relieved. However, the graph below tells a different story:
