@@ -127,7 +127,6 @@ This section conducts **allocation** and **consumption** analysis based on the t
     <td><img src="image/2_3_vip_table.png"></td>
   </tr>
 </table>
-![Alt text](image/2_3_vip_table.png?raw=true "Title")
 
 ### Data
 Based total **service units usages**(usages), we get **top 10** groups(Account), referred to as **VIP Groups**
