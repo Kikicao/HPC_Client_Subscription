@@ -12,7 +12,7 @@
  
  ⭕️ We use data from db.rcc.uchicago.edu to get yearly information of **Usage, Allocation, Available Resources and Users** to analyze the relationship among **Usage Portion, Allocation** and so on. Furthermore, we apply machine learning for the ***Classification*** of Users and ***Prediction*** of their future usages for future utilization of resources and optimal allocation.
 
-
+<center><img src="image/4_1_HPC.png" style="width:500" /></center>
 
 # 2 Description of Data
 
@@ -225,5 +225,6 @@ From the data above, we  proved that the research groups with smaller size accou
 
 Overall, the indicators we chose are proved to play a significant role in the usage portion and can be considered as reasonable predictor for future usage portion. In future, M Computing Center should assess subscription of computing resources based on those indicators.
 
+<center><img src="image/4_1_Demo.png" style="width:600" /></center>
 
  - _For security reason, the name of the computing center is replaced by M computing center._
