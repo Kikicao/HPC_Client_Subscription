@@ -117,8 +117,10 @@ This section conducts **allocation** and **consumption** analysis based on the t
 
 <br />
 <br />
+
 ## 3.3 VIP Groups
-<br />
+
+
 <table>
   <tr>
     <td><img src="image/2_3_vip_accounts.png",style="width:100%" /></td>
@@ -137,11 +139,11 @@ The graph shows from 2013 - 2018, 10 vip groups as a whole have more consumption
  - In every year, VIP groups as a whole are **underserved**: Even though they might have proposed for more resources, they didn't get enough.
  - This reflect a serious problem of **misallocation** especially for groups with large demand for resources. <br /><br /> <br />
 <br />
- 
 
 ## 3.4 Relation between Usage and Allocation
+
 <br /> 
-<center><img src="image/2_4_accumulated_usage_show.png" style="width:300px" /></center>
+<center><img src="image/2_4_accumulated_usage_show.png" style="width:400px" /></center>
  ⭕️This graph shows the accumulated usage portions of all accounts.
   - The point reveals that **10% accounts** use **80% total available resources**, which is highly leveraged allocation. 
   - In 2017 and 2018, the issue seemed to be relieved. However, the graph below tells a different story:
