@@ -10,13 +10,13 @@
 
  ⭕️ But in recent years, with the increased importance of computing resources and skyrocketed demand of them, there appears to be **underusage** and **misallocation**. 
  
- ⭕️ We use data from db.rcc.uchicago.edu to get yearly information of **Usage, Allocation, Available Resources and Users** to analyze the relationship among **Usage Portion, Allocation** and so on. Furthermore, we apply machine learning for the ***Classification*** of Users and ***Prediction*** of their future usages for future utilization of resources and optimal allocation.
+ ⭕️ We use data from db.###.uchicago.edu to get yearly information of **Usage, Allocation, Available Resources and Users** to analyze the relationship among **Usage Portion, Allocation** and so on. Furthermore, we apply machine learning for the ***Classification*** of Users and ***Prediction*** of their future usages for future utilization of resources and optimal allocation.
 <br /> 
 <center><img src="image/4_1_HPC.png" style="width:500" /></center>
 
 # 2 Description of Data
 
-Allocation and usage data were queried from MCC internal Account-Tool database (MySQL) hosted at ***db.rcc.uchicago.edu***, including multiple tables storing MCC accounts information. 
+Allocation and usage data were queried from MCC internal Account-Tool database (MySQL) hosted at ***db.###.uchicago.edu***, including multiple tables storing MCC accounts information. 
 
 - **unit**: stores the unit name (such as PSD, BSE, IME, Booth ...) and its internal ID.
 - **midway_account**: provides the account names, created dates and corresponding unit IDs.
@@ -32,7 +32,7 @@ Allocation records are directly dumped from the database covering cycles 2013 to
 
 Finally we aggregated the results of all year-cycles together, so in the table each record (row) is the data for a group in a year.
 
-The avaliable SUs were estimated from the history of system load. The data can be queried from MCC statistics sever ***stats.rcc.uchicago.edu***, and it hosts a time-series database (Graphite) that stores historical logs of allocated and idle nodes reported by SLURM. Data were pre-processed by aggregration to daily average before downloading. After downloading the daily data, we aggregated it by year-cycles. The data points for 2018 were projected to 365 days.
+The avaliable SUs were estimated from the history of system load. The data can be queried from MCC statistics sever ***stats.###.uchicago.edu***, and it hosts a time-series database (Graphite) that stores historical logs of allocated and idle nodes reported by SLURM. Data were pre-processed by aggregration to daily average before downloading. After downloading the daily data, we aggregated it by year-cycles. The data points for 2018 were projected to 365 days.
 
 
 # 3 Analysis and Discussions
@@ -83,7 +83,6 @@ The avaliable SUs were estimated from the history of system load. The data can b
 
 Based total **service units usages**(usages), we get top 5 divisions: PSD, IME, BSD, Booth and CI
 The acquirement of usages of divisions is by matching the **Unit ID** of accounts and corresponding Units(Divisions)
-
 
 This section conducts **allocation** and **consumption** analysis based on the top 5 divisons.
 
@@ -141,7 +140,7 @@ The graph shows from 2013 - 2018, 10 vip groups as a whole have more consumption
 
 ## 3.4 Relation between Usage and Allocation
 <br /> 
-<center><img src="image/2_4_accumulated_usage_show.png" style="width:500px" /></center>
+<center><img src="image/2_4_accumulated_usage_show.png" style="width:300px" /></center>
  ⭕️This graph shows the accumulated usage portions of all accounts.
   - The point reveals that **10% accounts** use **80% total available resources**, which is highly leveraged allocation. 
   - In 2017 and 2018, the issue seemed to be relieved. However, the graph below tells a different story:
@@ -153,7 +152,6 @@ The graph shows from 2013 - 2018, 10 vip groups as a whole have more consumption
   - Half of the large groups reach the hypothetical usage portion, but most smaller groups did not do so.
 <br /> 
 <img src='image/3_1_portion_allocation_group.png',style="width:600px" />
-
 ### Data
 Historical data of usages and allocations categorized by cycle and groups.
 
@@ -166,7 +164,7 @@ Historical data of usages and allocations categorized by cycle and groups.
 
 ⭕️The pair-wise scatter plots are shown below for **Group Features** and **Useage Portion prediction**. 
 <br /> 
-<center><img src="image/image/3_1_Matrix_Analysis.png" style="width:500" /></center>
+<img src="image/3_1_Matrix_Analysis.png" />
 
 ### Data
  - Here we regard groups with more than 4 million units of allocation as "VIP". "Jobs" are measured in every 3 million.
@@ -180,7 +178,7 @@ Historical data of usages and allocations categorized by cycle and groups.
 
 We use **Groups' Features** to conduct **Useage Portion prediction**. The 8 features used here is 'Usage','Allocation','Usage_Portion_n',,'users','jobs','SU per job','SU per user','Jobs per user'. We ran a logistic regression on **next year's usage portion**.
 <br /> 
-<img src="image/3_1_logistic_regression.png",style="width:600px" />
+<img src="image/3_1_Logistic_Regression.png" />
 
 ### Summary
  - Six out of Eight group features reach **significant level**, indicating a strong correlation between them and the next year's usage portion, and they can be used as predicting factors.
