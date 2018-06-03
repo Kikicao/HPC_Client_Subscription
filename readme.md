@@ -204,8 +204,8 @@ We use **Groups' Features** to conduct **Useage Portion prediction**. The 8 feat
 ### Relationship between Group Size and Usage Portion
 <table>
   <tr>
-    <td><img src="image/3_1_logistic_user_for_portion.png",style="width:70%" /></td>
-    <td><img src="image/3_1_logistic_user_for_portion_2.png.png",style="width:70%"/></td>
+    <td><img src="image/3_1_logistic_user_for_portion.png" style="width:70%" /></td>
+    <td><img src="image/3_1_logistic_user_for_portion_2.png.png" style="width:70%"/></td>
   </tr>
 </table>
 ### Summary
