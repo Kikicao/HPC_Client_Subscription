@@ -1,6 +1,6 @@
 <p><center><h1>Data Analysis for Client Service</h1></center></p>
 
-<p><center><strong>Yolanda Cao</strong></center></p>
+<p><center><strong>Yolanda Cao & Yuxing Peng</strong></center></p>
 
 
 
