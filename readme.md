@@ -1,6 +1,6 @@
 <p><center><h1>Machine Learning for Client Success</h1></center></p>
 
-<p><center><strong>Yolanda Cao</strong></center></p>
+<p><center><strong>Yolanda McKee</strong></center></p>
 
 
 
